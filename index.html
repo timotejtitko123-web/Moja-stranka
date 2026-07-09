@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <title>O mne</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #cfa8eb;
+        }
+        h1 {
+            color: #0300a0;
+        }
+        h2 {
+            color: #a00098;
+        }
+        section {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #38d3c6;
+            border-radius: 30px;
+            max-width: 500px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        img {
+            max-width: 500px;
+            border-radius: 30px;
+        }
+        a {
+            color: #31802e;
+            text-decoration: none;
+        }
+        .zaluby {
+            display: flex;
+            gap: 10px;
+        }
+        .zaluba {
+            flex: 1;
+            background-color: #4e80c5;
+            padding: 10px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Timotej Titko</h1>
+    <button onclick="ukazSpravu()">Klikni na prekvapenie</button>
+    <p id="tajnasprava" style="display: none;">Prekvapenie! 🎉</p>
+    <p>Má 25 rokov a žije v Bratislave.</p>
+    <img src="obrazok.jpg" alt="Timotej Titko">
+
+    <section>
+        <h2>Vzdelanie</h2>
+        <p>Vyštudoval informatiku na Univerzite Komenského v Bratislave.</p>
+    </section>
+
+    <section>
+        <h2>Moje záľuby</h2>
+        <div class="zaluby">
+        <div class="zaluba">Čítanie kníh</div>
+        <div class="zaluba">Šport</div>
+        <div class="zaluba">Cestovanie</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Kontakt</h2>
+        <p>Email: <a href="mailto:timotej.titko@gmail.com">timotej.titko@gmail.com</a></p>
+        <p>Telefón: <a href="tel:+421912345678">+421 912 345 678</a></p>
+        <p>Instagram: <a href="https://instagram.com" target="_blank">Instagram</a></p>
+    </section>
+    <script>
+    function ukazSpravu() {
+        var sprava = document.getElementById("tajnasprava");
+        if (sprava.style.display === "none") {
+            sprava.style.display = "block";
+        } else {
+            sprava.style.display = "none";
+        }
+    }
+    </script>
+</body>
+</html>
